@@ -190,4 +190,8 @@ footer {
   footer {
     font-size: 14px;
   }
+  .footer_wrapper {
+    display: block;
+    text-align: center;
+  }
 }
