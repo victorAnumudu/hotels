@@ -1,0 +1,161 @@
+.main_page_image {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.image_overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.576);
+}
+
+.main_image {
+  width: 100%;
+  height: 100%;
+}
+
+/* making the slide images to go off the page */
+.slide_image_offpage {
+  position: absolute;
+  left: -500%;
+}
+/* making the slide images to be on the page */
+.slide_image_onpage {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  animation-name: slide;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header_description {
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.header_description h1,
+.header_description p {
+  padding: 10px 0;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.header_description h1 {
+  font-size: 34px;
+}
+.header_description p {
+  font-size: 20px;
+}
+
+.page_anchor {
+  color: #fff;
+  background-color: #eb392e;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.page_anchor:hover {
+  color: #eb392e;
+  background-color: #fff;
+  border: 1px solid #eb392e;
+}
+
+section {
+  background-color: #e5e5e5;
+  padding: 50px;
+}
+
+.section_heading {
+  text-align: center;
+  font-size: 25px;
+  padding: 30px 0;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.section_heading::after {
+  content: "";
+  height: 5px;
+  width: 10%;
+  border-radius: 5px;
+  background-color: #eb392e;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.section_paragraph {
+  margin: 20px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/* slide controls */
+.slide_controls{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 30px;
+  z-index: 4;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slide_backward{
+  left: 10px; 
+}
+.slide_forward{
+  right: 10px;
+  
+}
+
+
+
+@media screen and (max-width: 567px) {
+  .main_page_image {
+    height: 300px;
+  }
+
+  .header_description h1 {
+    font-size: 24px;
+  }
+  .header_description p {
+    font-size: 16px;
+  }
+  .page_anchor {
+    font-size: 14px;
+  }
+  .section_heading {
+    font-size: 20px;
+  }
+  .section_paragraph {
+    font-size: 14px;
+  }
+}
