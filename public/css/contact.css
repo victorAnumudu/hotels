@@ -1,0 +1,50 @@
+
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact_address, .contact_form{
+    width: 50%;
+    padding: 10px;
+}
+.contact_info{
+    display: flex;
+    align-items: center;
+}
+.contact_icon{
+    padding: 5px;
+    color: #eb392e;
+    width: 50px;
+    font-size: 24px;
+}
+.contact_detail {
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact_input, .contact_message{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.contact_message{
+    resize: none;
+}
+
+@media screen and (max-width:567px) {
+    .contact, .contact_info {
+        display: block;
+    }
+    .contact_info{
+        text-align: center;
+    }
+    .contact_address, .contact_form{
+        width: 100%;
+    }
+}

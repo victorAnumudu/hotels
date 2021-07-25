@@ -80,6 +80,9 @@
   background-color: #fff;
   border: 1px solid #eb392e;
 }
+.read_more {
+  display: none;
+}
 
 section {
   background-color: #e5e5e5;
@@ -114,9 +117,12 @@ section {
   text-align: center;
 }
 
+.section_paragraph_justified {
+  text-align: justify;
+}
 
 /* slide controls */
-.slide_controls{
+.slide_controls {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -128,15 +134,49 @@ section {
   border-radius: 50%;
   cursor: pointer;
 }
-.slide_backward{
-  left: 10px; 
+.slide_backward {
+  left: 10px;
 }
-.slide_forward{
+.slide_forward {
   right: 10px;
-  
+}
+
+/* rotate div on form submit */
+.send_box{
+  display: flex;
+  align-items: center;
+}
+.rotate {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 5px;
+  border: 2px solid darkgreen;
+  border-bottom: 2px solid transparent;
+  margin-left: 5px;
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: .5s;
+  display: inline-block;
+}
+.rotate_hide {
+  display: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
+/* status reply */
+.status_reply{
+  color: darkgreen;
+}
 
 @media screen and (max-width: 567px) {
   .main_page_image {
@@ -151,6 +191,9 @@ section {
   }
   .page_anchor {
     font-size: 14px;
+  }
+  section {
+    padding: 30px;
   }
   .section_heading {
     font-size: 20px;

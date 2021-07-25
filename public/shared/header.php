@@ -24,7 +24,7 @@
             if(isset($home)){
                 echo "<h1>Enjoy A Luxury Experience</h1>";
             } else if (isset($about)) {
-                echo "<h1>ABOUT US</h1>";
+                echo "<h1>We have remained UNBEATABLE for years</h1>";
             } else if (isset($contact)) {
                 echo "<h1>CONTACT US</h1>";
             }

@@ -8,11 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels <?php echo $page_title ?></title>
     <link rel="shortcut icon" href="<?php echo url_for('/images/nav-bar-image.png'); ?>" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4ea96ace4f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?php echo url_for('/shared/nav_footer.css') ?>">
     <link rel="stylesheet" href="<?php echo url_for('/shared/custom.css') ?>">
 
     <?php if(isset($home)) { ?>
         <link rel="stylesheet" href="<?php echo url_for('/css/index.css') ?>">
+    <?php } ?>
+    <?php if(isset($about)) { ?>
+        <link rel="stylesheet" href="<?php echo url_for('/css/about.css') ?>">
+    <?php } ?>
+    <?php if(isset($contact)) { ?>
+        <link rel="stylesheet" href="<?php echo url_for('/css/contact.css') ?>">
     <?php } ?>
 
 </head>

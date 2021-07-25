@@ -1,0 +1,18 @@
+
+.gym_images{
+    display: flex;
+}
+
+.gym_images img {
+    padding: 10px;
+    width: 50%;
+}
+
+@media screen and (max-width:567px) {
+    .gym_images{
+        display: block;
+    }
+    .gym_images img {
+        width: 100%;
+    }
+}

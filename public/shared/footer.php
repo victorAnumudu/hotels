@@ -31,5 +31,11 @@
     <?php if(isset($home)) { ?>
         <script src="<?php echo url_for('/js/index.js'); ?>"></script>
     <?php } ?>
+    <?php if(isset($about)) { ?>
+        <script src="<?php echo url_for('/js/about.js'); ?>"></script>
+    <?php } ?>
+    <?php if(isset($contact)) { ?>
+        <script src="<?php echo url_for('/js/contact.js'); ?>"></script>
+    <?php } ?>
 </body>
 </html>
