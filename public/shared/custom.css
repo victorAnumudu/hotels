@@ -13,6 +13,13 @@
   height: inherit;
   background-color: rgba(0, 0, 0, 0.576);
 }
+.image_overlay_lighter{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 .main_image {
   width: 100%;
@@ -73,6 +80,7 @@
   display: inline-block;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 
 .page_anchor:hover {

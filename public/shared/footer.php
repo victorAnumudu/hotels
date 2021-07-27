@@ -18,10 +18,10 @@
                     <a class="footer_nav_anchor" href="<?php echo url_for('/pages/contact.php'); ?>">Contact</a>
                 </li>
                 <li class="footer_nav_item">
-                    <a class="footer_nav_anchor" href="">Book Now</a>
+                    <a class="footer_nav_anchor" href="<?php echo url_for('/pages/login.php'); ?>">Login</a>
                 </li>
                 <li class="footer_nav_item">
-                    <a class="footer_nav_anchor" href="">Login</a>
+                    <a class="footer_nav_anchor" href="<?php echo url_for('/pages/signup.php'); ?>">Signup</a>
                 </li>
             </ul>
         </div>

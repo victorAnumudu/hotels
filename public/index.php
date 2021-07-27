@@ -21,22 +21,22 @@
         <h2 class="section_heading">Welcome to Hotels</h2>
         <div class="section_images_div">
             <div class="welcome_image">
-                <div class="image_overlay"></div>
+                <div class="image_overlay_lighter"></div>
                 <img class="section_img" src="<?php echo url_for("/images/home/welcome/great_location.jpg") ?>" alt="location image">
                 <p class="section_image_description">Great Location</p>
             </div>
             <div class="welcome_image">
-                <div class="image_overlay"></div>
+                <div class="image_overlay_lighter"></div>
                 <img class="section_img" src="<?php echo url_for("/images/home/welcome/luxury_room.jpg") ?>" alt="location image">
                 <p class="section_image_description">Luxury Rooms</p>
             </div>
             <div class="welcome_image">
-                <div class="image_overlay"></div>
+                <div class="image_overlay_lighter"></div>
                 <img class="section_img" src="<?php echo url_for("/images/home/welcome/delicious_foods.jpg") ?>" alt="delicious image">
                 <p class="section_image_description">Delicious Food</p>
             </div>
             <div class="welcome_image">
-                <div class="image_overlay"></div>
+                <div class="image_overlay_lighter"></div>
                 <img class="section_img" src="<?php echo url_for("/images/home/welcome/great_service.jpg") ?>" alt="services image">
                 <p class="section_image_description">Great Services</p>
             </div>

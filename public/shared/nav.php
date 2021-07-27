@@ -21,6 +21,9 @@
     <?php if(isset($contact)) { ?>
         <link rel="stylesheet" href="<?php echo url_for('/css/contact.css') ?>">
     <?php } ?>
+    <?php if(isset($login) || isset($signup) ) { ?>
+        <link rel="stylesheet" href="<?php echo url_for('/css/loginout.css') ?>">
+    <?php } ?>
 
 </head>
 <body>
@@ -43,10 +46,14 @@
                 }  ?>">Contact</a>
             </li>
             <li class="nav_list_item">
-                <a href="#" class="nav_anchor nav_login">Book now</a>
+                <a href="<?php echo url_for("/pages/login.php") ?>" class="nav_anchor nav_login <?php if(isset($login)){
+                    echo 'nav_login_active';
+                } ?>">Login</a>
             </li>
             <li class="nav_list_item">
-                <a href="#" class="nav_anchor nav_login">Login</a>
+                <a href="<?php echo url_for('/pages/signup.php'); ?>" class="nav_anchor nav_login <?php if(isset($signup)){
+                    echo 'nav_login_active';
+                } ?>">Signup</a>
             </li>
         </ul>
         <div class="nav_toggle">

@@ -64,7 +64,11 @@ body {
   border-radius: 5px;
   border: 1px solid transparent;
 }
-
+.nav_login_active {
+  color: #676767;
+  background-color: transparent;
+  border-color: #eb392e;
+}
 .nav_login:hover {
   color: #eb392e;
   background-color: #fff;
