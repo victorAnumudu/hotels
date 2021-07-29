@@ -27,15 +27,19 @@
         </div>
         <p class="copyright">&copy; 2021 - Hotels.ng</p>
     </footer>
-    <script src="<?php echo url_for('/shared/custom.js'); ?>"></script>
+    <script src="<?php echo url_for('/shared/nav.js'); ?>"></script>
+    
     <?php if(isset($home)) { ?>
         <script src="<?php echo url_for('/js/index.js'); ?>"></script>
+        <script src="<?php echo url_for('/shared/custom.js'); ?>"></script>
     <?php } ?>
     <?php if(isset($about)) { ?>
         <script src="<?php echo url_for('/js/about.js'); ?>"></script>
+        <script src="<?php echo url_for('/shared/custom.js'); ?>"></script>
     <?php } ?>
     <?php if(isset($contact)) { ?>
         <script src="<?php echo url_for('/js/contact.js'); ?>"></script>
+        <script src="<?php echo url_for('/shared/custom.js'); ?>"></script>
     <?php } ?>
     <?php if(isset($login)) { ?>
         <script src="<?php echo url_for('/js/login.js'); ?>"></script>

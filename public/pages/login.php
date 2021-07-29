@@ -18,11 +18,12 @@
     <form class="login_form" action="<?php echo url_for("pages/login.php") ?>" method="post" onsubmit="return emptyFields()">
         <p class="form_detail">Login <span id="error" class="error_message"><?php //php eror ?></span></p>
         <div class="user_username">
-            <!-- <i class="account_icon fa-solid fa-user"></i> -->
-            <input type="text" placeholder="Enter email or username" name="user_name" class="input_field input">
+            <i class="account_icon fas fa-users"></i>
+            <input type="email" placeholder="Enter email or username" name="user_name" class="input_field input">
         </div>
         <div class="user_password">
-            <!-- <i class="account_icon fa-solid fa-unlock-keyhole"></i> -->
+            <i class="account_icon show_hide_pwd fas fa-lock"></i>
+            <i class="account_icon show_hide_pwd fas fa-unlock-alt"></i>
             <input type="password" placeholder="Enter password" name="password" class="input_field input">
         </div>
         <div class="send_box">

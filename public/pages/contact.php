@@ -53,11 +53,11 @@
             </div>
         </div>
         <form class="contact_form" id="contact_form" method="post" action="<?php echo url_for("/pages/contact.php") ?>" onsubmit="return emptyFields()">
-            <p><span id="error" class="<?php echo $reply ? 'success_message' : 'error_message' ?>"><?php
+            <p id="error" class="<?php echo isset($reply) ? 'success_message' : 'error_message' ?>"><?php
                 if(isset($reply)){
                     echo $reply;
                 }
-            ?></span></p>
+            ?></p>
             <input class="contact_input input" type="text" name="name" placeholder="Enter your name">
             <input class="contact_input input" type="email" name="email" placeholder="Enter your email">
             <textarea class="contact_message input" name="message" id="" cols="30" rows="10"></textarea>
