@@ -5,7 +5,6 @@
 
     if(isset($_POST["send"])){
         // $reply = "message sucesfully sent!";
-        sleep(1);
         header("location: " . url_for("/pages/contact.php?id=#contact_form"));
     }
 
@@ -53,15 +52,15 @@
                 </div>
             </div>
         </div>
-        <form class="contact_form" id="contact_form" method="post" action="<?php echo url_for("/pages/contact.php") ?>">
-            <p class="status_reply"><?php
+        <form class="contact_form" id="contact_form" method="post" action="<?php echo url_for("/pages/contact.php") ?>" onsubmit="return emptyFields()">
+            <p><span id="error" class="<?php echo $reply ? 'success_message' : 'error_message' ?>"><?php
                 if(isset($reply)){
                     echo $reply;
                 }
-            ?></p>
-            <input class="contact_input" type="text" name="name" placeholder="Enter your name">
-            <input class="contact_input" type="email" name="email" placeholder="Enter your email">
-            <textarea class="contact_message" name="message" id="" cols="30" rows="10"></textarea>
+            ?></span></p>
+            <input class="contact_input input" type="text" name="name" placeholder="Enter your name">
+            <input class="contact_input input" type="email" name="email" placeholder="Enter your email">
+            <textarea class="contact_message input" name="message" id="" cols="30" rows="10"></textarea>
             <div class="send_box">
                 <input class="page_anchor" type="submit" name="send" value="Send">
                 <span class="rotate rotate_hide"></span>

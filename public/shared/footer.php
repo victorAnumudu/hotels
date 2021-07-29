@@ -37,5 +37,11 @@
     <?php if(isset($contact)) { ?>
         <script src="<?php echo url_for('/js/contact.js'); ?>"></script>
     <?php } ?>
+    <?php if(isset($login)) { ?>
+        <script src="<?php echo url_for('/js/login.js'); ?>"></script>
+    <?php } ?>
+    <?php if(isset($signup)) { ?>
+        <script src="<?php echo url_for('/js/signup.js'); ?>"></script>
+    <?php } ?>
 </body>
 </html>

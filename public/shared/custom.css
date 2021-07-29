@@ -11,13 +11,13 @@
   z-index: 2;
   width: 100%;
   height: inherit;
-  background-color: rgba(0, 0, 0, 0.576);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.image_overlay_lighter{
+.image_overlay_lighter {
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: inherit;
+  height: initial;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -150,7 +150,7 @@ section {
 }
 
 /* rotate div on form submit */
-.send_box{
+.send_box {
   display: flex;
   align-items: center;
 }
@@ -165,7 +165,7 @@ section {
   animation-name: rotate;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   display: inline-block;
 }
 .rotate_hide {
@@ -180,10 +180,14 @@ section {
   }
 }
 
-
-/* status reply */
-.status_reply{
+/* reply */
+.success_message {
   color: darkgreen;
+  font-size: 14px;
+}
+.error_message {
+  color: red;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 567px) {

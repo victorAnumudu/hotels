@@ -1,4 +1,3 @@
-
 // checking for empty fields in the form
 let emptyFields = () => {
     let rotate = document.querySelector(".rotate");
@@ -12,17 +11,6 @@ let emptyFields = () => {
             error.innerText = "Please fill all fields!";
             return false;
         }
-    }
-
-    let email = "/\w+@\w+\.\w+/";
-    if(!(email.exec(allInputs.email.value))) {
-        error.innerText = "Invalid email";
-        return false;
-    }
-
-    if(!(allInputs.message.length >= 50)) {
-        error.innerText = "your characters must be up to 50";
-        return false;
     }
 
     rotate.classList.remove("rotate_hide")
