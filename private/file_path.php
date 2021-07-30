@@ -7,6 +7,7 @@
   define("PROJECT_PATH", dirname(PRIVATE_PATH));
   define("PUBLIC_PATH", PROJECT_PATH . '/public');
   define("SHARED_PATH", PUBLIC_PATH . '/shared');
+  define("DASHBOARD_PATH", PUBLIC_PATH . '/dashboard');
 
   // Assign the root URL to a PHP constant
   // * Do not need to include the domain

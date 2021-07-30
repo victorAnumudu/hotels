@@ -9,7 +9,7 @@ let hideNav = () => {
     toggleBars[1].classList.remove("change_toggle_line2");
     toggleBars[2].classList.remove("change_toggle_line3");
 
-    document.querySelector(".nav_list").classList.remove("show_nav");
+    document.querySelector("aside").classList.remove("show_aside");
     
     
 }
@@ -23,6 +23,6 @@ let showNav = () => {
     toggleBars[1].classList.toggle("change_toggle_line2");
     toggleBars[2].classList.toggle("change_toggle_line3");
 
-    document.querySelector(".nav_list").classList.toggle("show_nav");
+    document.querySelector("aside").classList.toggle("show_aside");
 }
 document.querySelector(".nav_toggle").addEventListener("click", showNav);

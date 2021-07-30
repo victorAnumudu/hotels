@@ -27,7 +27,7 @@
             <input type="text" id="lastname" class="input_field" name="lastname" value="">
         </div>
         <div class="contact">
-            <label for="contact">Contact</label>
+            <label for="contact">Phone Number</label>
             <input type="text" id="contact" class="input_field" name="contact" value="">
         </div>
         <div class="email">

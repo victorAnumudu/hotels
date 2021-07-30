@@ -1,0 +1,171 @@
+:root {
+  --footerspace: 40px;
+  --headerspace: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+header {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: var(--headerspace);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header img {
+  height: 50px;
+}
+.user_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: orangered;
+  margin: 0 10px;
+}
+.nav_toggle {
+  display: none;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.nav_toggle_lines {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #676767;
+  left: 0;
+  transition: all 0.5s;
+}
+.toggle_line1 {
+  top: 7px;
+}
+.toggle_line2 {
+  top: 17px;
+}
+.toggle_line3 {
+  top: 27px;
+}
+
+.change_toggle_line1 {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.change_toggle_line2 {
+  background-color: transparent;
+}
+.change_toggle_line3 {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+/* aside nav section */
+aside {
+  background-color: #fff;
+  width: 150px;
+  position: fixed;
+  left: 0;
+  top: var(--headerspace);
+  bottom: var(--footerspace);
+  z-index: 1;
+}
+.nav_list{
+    list-style-type: none;
+}
+.nav_item_active{
+    background-color: tomato;
+}
+span i{
+    width: 25px;
+    display: inline-block;
+}
+.nav_link{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #393939;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 15px 5px;
+    transition: .5s;
+    font-weight: 600;
+}
+.nav_link:hover{
+    color: #fff;
+    background-color: #000;
+}
+
+main {
+  margin: var(--headerspace) 0 var(--footerspace) 150px;
+  background-color: #e3e3e3;
+  padding: 10px;
+  min-height: 90vh;
+}
+
+/* footer section */
+footer {
+  background-color: #393939;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  height: var(--footerspace);
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    width: 80px;
+  }
+  .nav_link{
+      flex-wrap: wrap;
+      font-size: 14px;
+  }
+  
+  main {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* header section */
+  .nav_toggle {
+    display: block;
+  }
+  /* asise nav section */
+  aside {
+    left: -500%;
+    transition: all 0.5s;
+  }
+  .show_aside {
+    left: 0;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}
