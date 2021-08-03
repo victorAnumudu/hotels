@@ -46,3 +46,14 @@ let emptyFields = () => {
     rotate.classList.remove("rotate_hide")
     return true
 }
+
+
+// for passport
+let displayImage = () => {
+    // let image = document.querySelector(".passport_image");
+    // let imagePath = document.getElementById("passport").files[0].name;
+    // imageSrc.setAttribute("src", document.getElementById("passport").value)
+    console.log(imagePath)
+}
+
+document.getElementById("passport").addEventListener("change", displayImage)

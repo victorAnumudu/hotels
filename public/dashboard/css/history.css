@@ -1,0 +1,40 @@
+.history {
+  background-image: url("../../images/contact/slideshow/slide_3.jpg");
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  background-position: center;
+  min-height: inherit;
+  position: relative;
+  padding: 20px 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* overflow: scroll; */
+}
+
+/* .history_overlay {
+  position: absolute;
+  width: 100%;
+  min-height: inherit;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+} */
+
+.history table,
+.history p {
+  /* position: absolute; */
+  /* z-index: 0; */
+  background-color: #fff;
+  border-collapse: collapse;
+  padding: 20px;
+  width: 90%;
+  margin: 0% auto;
+}
+
+.history table th,
+.history table td {
+  padding: 10px;
+  border: 1px solid #000;
+}

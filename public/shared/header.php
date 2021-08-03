@@ -30,7 +30,7 @@
             }
         ?>
         <p>Elegant rooms at affordable prices</p>
-        <a class="page_anchor" href="">BOOK NOW</a>
+        <a class="page_anchor" href="<?php echo url_for("/pages/login.php") ?>">BOOK NOW</a>
     </div>
 
     <!-- slide controls -->

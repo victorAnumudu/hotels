@@ -46,6 +46,11 @@ form div {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
+.passport{
+  width: 100px;
+  height: 100px;
+}
+
 
 @media screen and (max-width: 567px) {
   .user_account {

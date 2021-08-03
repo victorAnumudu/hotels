@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --footerspace: 40px;
   --headerspace: 70px;
@@ -10,6 +16,7 @@
 }
 body {
   position: relative;
+  font-family: "Roboto", sans-serif;
 }
 header {
   background-color: #fff;
@@ -34,7 +41,7 @@ header img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: #393939;
   margin: 0 10px;
 }
 .nav_toggle {
@@ -77,7 +84,7 @@ header img {
 
 /* aside nav section */
 aside {
-  background-color: #fff;
+  background-color: #e3e3e3;
   width: 150px;
   position: fixed;
   left: 0;
@@ -85,39 +92,61 @@ aside {
   bottom: var(--footerspace);
   z-index: 1;
 }
-.nav_list{
-    list-style-type: none;
+.nav_list {
+  list-style-type: none;
 }
-.nav_item_active{
-    background-color: tomato;
+span i {
+  width: 25px;
+  display: inline-block;
 }
-span i{
-    width: 25px;
-    display: inline-block;
+.nav_link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #393939;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 15px 5px;
+  transition: 0.5s;
+  font-weight: 600;
 }
-.nav_link{
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #393939;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 15px 5px;
-    transition: .5s;
-    font-weight: 600;
+.nav_link:hover {
+  color: #fff;
+  background-color: #393939;
 }
-.nav_link:hover{
-    color: #fff;
-    background-color: #000;
+
+.nav_item_active {
+  background-color: #393939;
+  color: #fff;
 }
 
 main {
   margin: var(--headerspace) 0 var(--footerspace) 150px;
-  background-color: #e3e3e3;
-  padding: 10px;
+  /* background-color: #e3e3e3; */
+  padding: 0 10px;
   min-height: 90vh;
+}
+
+/* For dashboard page anchors */
+.page_anchor {
+  color: #fff;
+  background-color: #eb392e;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.page_anchor:hover {
+  color: #eb392e;
+  background-color: #fff;
+  border: 1px solid #eb392e;
 }
 
 /* footer section */
@@ -141,14 +170,55 @@ footer {
   aside {
     width: 80px;
   }
-  .nav_link{
-      flex-wrap: wrap;
-      font-size: 14px;
+  .nav_link {
+    flex-wrap: wrap;
+    font-size: 14px;
   }
-  
+
   main {
     margin-left: 80px;
   }
+}
+
+/* rotate div on form submit */
+.send_box {
+  display: flex;
+  align-items: center;
+}
+.rotate {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 5px;
+  border: 2px solid darkgreen;
+  border-bottom: 2px solid transparent;
+  margin-left: 5px;
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  display: inline-block;
+}
+.rotate_hide {
+  display: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* reply */
+.success_message {
+  color: darkgreen;
+  font-size: 14px;
+}
+.error_message {
+  color: red;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 576px) {
@@ -167,5 +237,8 @@ footer {
 
   main {
     margin-left: 0;
+  }
+  .page_anchor {
+    font-size: 14px;
   }
 }
