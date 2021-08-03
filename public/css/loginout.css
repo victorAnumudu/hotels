@@ -46,7 +46,9 @@ form div {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
-.passport{
+
+/* for passport image */
+.passport_size{
   width: 100px;
   height: 100px;
 }

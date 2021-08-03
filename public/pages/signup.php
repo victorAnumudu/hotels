@@ -47,9 +47,9 @@
             <input type="password" id="repeat_password" name="repeat_password" class="input_field">
         </div>
         <div class="passport">
-            <label for="passport">Select image</label>
-            <!-- <input type="file" id="passport" name="passport" accept="image/*" class="input_field"> -->
-            <input type="file" id="passport" name="passport" accept="image/*" class="input_image">
+            <label for="passport">Upload Passport</label>
+            <input type="file" id="passport" name="passport" accept="image/*" class="input_field">
+            <!-- <input type="file" id="passport" name="passport" accept="image/*" class="input_image"> -->
             <img class="passport_image" src="" alt="passport">
         </div>
         <div class="send_box">

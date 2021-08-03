@@ -49,11 +49,14 @@ let emptyFields = () => {
 
 
 // for passport
-let displayImage = () => {
-    // let image = document.querySelector(".passport_image");
-    // let imagePath = document.getElementById("passport").files[0].name;
-    // imageSrc.setAttribute("src", document.getElementById("passport").value)
-    console.log(imagePath)
+let displayImage = (event) => {
+    let image = document.querySelector(".passport_image");
+    let imagePath = URL.createObjectURL(event.files[0]);
+    image.setAttribute("src", imagePath);
+    image.classList.add("passport_size");
+    console.log(URL.createObjectURL(event.files[0]));
 }
 
-document.getElementById("passport").addEventListener("change", displayImage)
+document.getElementById("passport").addEventListener("change", function () {
+    displayImage(this)
+})
