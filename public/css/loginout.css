@@ -48,11 +48,10 @@ form div {
 }
 
 /* for passport image */
-.passport_size{
+.passport_size {
   width: 100px;
   height: 100px;
 }
-
 
 @media screen and (max-width: 567px) {
   .user_account {

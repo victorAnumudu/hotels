@@ -3,13 +3,13 @@
 // checking for empty fields in the form
 let emptyFields = () => {
     let rotate = document.querySelector(".rotate");
-    // let allInputs = document.querySelector("form");
-    // let error = document.getElementById("error");
-    // error.setAttribute("class" , "error_message");
+    let allInputs = document.querySelector("form");
+    let error = document.getElementById("error");
+    error.setAttribute("class" , "error_message");
 
-    // testing for any empty field;
+    //testing for any empty field;
     // for(i of allInputs.elements) {
-    //     if(i.value == "") {
+    //     if(!i.select) {
     //         error.innerText = "Please fill all fields!";
     //         return false;
     //     }
