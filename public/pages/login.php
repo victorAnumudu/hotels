@@ -43,7 +43,7 @@
                     }
                     else{
                         session_start();
-                        $_SESSION['username'] = $username;
+                        $_SESSION['username'] = $record['user_name'];
                         $_SESSION['id'] = $record['id'];
                         header("location: " . url_for("/dashboard/index.php"));
                     }

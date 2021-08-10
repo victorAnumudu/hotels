@@ -20,7 +20,7 @@
     $result = $stmt->get_result();
     $stmt->close();
     $row = $result->fetch_assoc();
-    $passport_name = $row['passport'];
+    $passport_name =$row['passport'];
 ?>
 
 <?php 
@@ -32,8 +32,6 @@
         header("location: ".url_for("/index.php"));
     }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +61,7 @@
     <header>
         <img src="<?php echo url_for("images/nav-bar-image.png") ?>" alt="nav image">
         <div>
-            <img src="<?php echo url_for("dashboard/upload/$passport_name") ?>" class="user_image" alt="user"></img>
+            <img src="<?php echo url_for("/dashboard/upload/".$passport_name) ?>" class="user_image" alt="user"></img>
             <div class="nav_toggle">
                 <div class="nav_toggle_lines toggle_line1"></div>
                 <div class="nav_toggle_lines toggle_line2"></div>
@@ -101,4 +99,3 @@
         </ul>
     </aside>
     <main>
-    
