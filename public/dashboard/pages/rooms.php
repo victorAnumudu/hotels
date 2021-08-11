@@ -12,12 +12,6 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
     $missing = [];
     $error = [];
 
-    //if no missing field, query the database
-    // $sql = "SELECT rooms.room_type, COUNT(room_number.room_number) AS num_open_rooms FROM rooms ";
-    // $sql .= "JOIN room_number ON room_number.room_id = rooms.room_id ";
-    // $sql .= "WHERE room_number.booked = 0 ";
-    // $sql  .= "GROUP BY rooms.room_type HAVING COUNT(room_number.room_number) > 0;";
-
     $sql = "SELECT * FROM room_number ";
     $sql .= "WHERE booked = 0 ;";
    
@@ -27,7 +21,6 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
     $result = $stmt->get_result();
 
     if($result->num_rows <= 0) {
-        // header("location: " . url_for("/dashboard/rooms.php?norroms=yes"));
         $avaliable_rooms = [];
         $error[] = "no_rooms";
     } else {
@@ -81,8 +74,8 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
     $connection->close();
 ?>
     
-  <div class="rooms">
-       <!-- our room section -->
+<div class="rooms">
+    <!-- our room section -->
    <div class="our_room">
         <h2 class="section_heading">Our Rooms and Suites</h2>
         <p class="section_paragraph">Dumont rooms & suites are all tastefully decorated and provided with every modern amenity for your comfort and relaxation.</p>
@@ -128,24 +121,12 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
             </select>
         </div>
 
-        <!-- <div class="no">
-            <label for="">Select Room Number 
-                <span id="error" class="error_message">
-                    <?php// echo ($missing && in_array('room_number', $missing)) ? "Please select room number!" : "" ?>
-                </span>
-            </label> <br>
-            <select name="room_number" id="">
-                <option value="">not selected</option>
-                <option value="1">001</option>
-                <option value="2">002</option>
-                <option value="3">003</option>
-            </select>
-        </div> -->
+        
         <div class="send_box">
             <input class="page_anchor" type="submit" name="book" value="Book">
             <span class="rotate rotate_hide"></span>
         </div>
     </form>
-  </div>
+</div>
 
 <?php require DASHBOARD_PATH .'/shared/footer.php'; ?>

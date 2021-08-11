@@ -34,10 +34,11 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("is", $booked, $room_number);
         if($stmt->execute()){
+            $id =  $_GET['id'];
             $active = 0;
-            $sql = "UPDATE booked_record SET active = ? WHERE room_number = ? LIMIT 1";
+            $sql = "UPDATE booked_record SET active = ? WHERE booked_record_id = ? LIMIT 1";
             $stmt = $connection->prepare($sql);
-            $stmt->bind_param("is", $active, $room_number);
+            $stmt->bind_param("ii", $active, $id);
             $stmt->execute();
         }
         header("location: " . url_for("/dashboard/pages/history.php"));
@@ -64,7 +65,7 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
                     <th><?php echo $value['room_number'] ?></th>
                     <th><?php echo $value['date_booked'] ?></th>
                     <th>
-                        <a href="<?php echo ($_SERVER['PHP_SELF']."?room_number=".$value['room_number']) ?>">
+                        <a href="<?php echo ($_SERVER['PHP_SELF']."?room_number=".$value['room_number']."&id=".$value['booked_record_id']) ?>">
                         <?php echo $value['active'] == 0 ? "checked Out" : "check out!"; ?>
                         </a>
                     </th>
