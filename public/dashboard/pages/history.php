@@ -57,7 +57,7 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
                 <th>S/N</th>
                 <th>Room Type</th>
                 <th>Date Booked</th>
-                <th>Check out</th>
+                <th>Status</th>
             </tr>
             <?php foreach($booked_rooms as $keys => $value) { ?>
                 <tr>
@@ -66,7 +66,7 @@ require DASHBOARD_PATH .'/shared/header_aside.php';
                     <th><?php echo $value['date_booked'] ?></th>
                     <th>
                         <a href="<?php echo ($_SERVER['PHP_SELF']."?room_number=".$value['room_number']."&id=".$value['booked_record_id']) ?>">
-                        <?php echo $value['active'] == 0 ? "checked Out" : "check out!"; ?>
+                        <?php echo $value['active'] == 0 ? "you're checked out" : "click to check out"; ?>
                         </a>
                     </th>
                 </tr>
